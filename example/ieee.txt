@@ -1,0 +1,11 @@
+[1] Google Maps, Los Angeles.” [Online]. Available: https://maps.app.goo.gl/K14c5HZhg16SAT7U7
+
+[2] Ministry of Land, Infrastructure, Transport and Tourism Japan, *Japan Underground Construction Law*. 2015.
+
+[3] Python, “Python Programming Language.” [Online]. Available: https://www.python.org
+
+[4] A. Kitsopoulou, E. Bellos, and C. Tzivanidis, “An Up-to-Date Review of Passive Building Envelope Technologies for Sustainable Design,” *Energies 2024, Vol. 17, Page 4039*, vol. 17, no. 16, p. 4039, Aug. 2024, doi: 10.3390/EN17164039.
+
+[5] A. A. S. Bahdad, S. F. S. Fadzil, H. O. Onubi, and S. A. BenLasod, “Sensitivity analysis linked to multi-objective optimization for adjustments of light-shelves design parameters in response to visual comfort and thermal energy performance,” *Journal of Building Engineering*, vol. 44, p. 102996, Dec. 2021, doi: 10.1016/J.JOBE.2021.102996.
+
+[6] G. S. Odiyur Vathanam et al., “A Review on Effective Use of Daylight Harvesting Using Intelligent Lighting Control Systems for Sustainable Office Buildings in India,” *Sustainability*, vol. 13, no. 9, p. 4973, Apr. 2021, doi: 10.3390/su13094973.

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>CiteCheck</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap");
+
+      body {
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable;
+      }
+    </style>
+
+    <script src="script.js"></script>
+  </head>
+
+  <body
+    class="bg-gray-50 text-gray-900 font-[Gabarito] min-h-screen flex flex-col"
+  >
+    <!-- Navbar -->
+    <nav
+      class="bg-gray-900 text-white flex items-center p-4 sticky top-0 z-10 shadow-lg justify-between"
+    >
+      <!-- Title  -->
+      <div>
+        <a
+          href="/"
+          class="w-fit"
+        >
+          <h1 class="text-lg font-semibold m-0">CiteCheck</h1>
+        </a>
+      </div>
+      <!-- Repo  -->
+      <div class="flex items-center">
+        <a
+          href="https://github.com/arnottferels/cite-check"
+          target="_blank"
+          class="text-gray-400 text-xl hover:text-white"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </nav>
+
+    <div
+      class="container mx-auto p-6 sm:w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] prose text-gray-900 bg-white flex-grow"
+    >
+      <!-- Row for Citation Style, Start Year, and End Year -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <!-- Citation Style -->
+        <div class="flex flex-col">
+          <label
+            for="citationStyle"
+            class="font-medium mb-2 text-gray-700"
+            >Citation Style:</label
+          >
+          <div class="relative">
+            <select
+              id="citationStyle"
+              class="form-select block w-full p-2 rounded border border-gray-300 text-gray-900 bg-white"
+            >
+              <!-- Options will be injected dynamically -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Start Year -->
+        <div class="flex flex-col">
+          <label
+            for="startYear"
+            class="font-medium mb-2 text-gray-700"
+            >Start Year:</label
+          >
+          <input
+            type="number"
+            id="startYear"
+            class="form-input block w-full p-2 rounded border border-gray-300 text-gray-900 bg-white"
+          />
+        </div>
+
+        <!-- End Year -->
+        <div class="flex flex-col">
+          <label
+            for="endYear"
+            class="font-medium mb-2 text-gray-700"
+            >End Year:</label
+          >
+          <input
+            type="number"
+            id="endYear"
+            class="form-input block w-full p-2 rounded border border-gray-300 text-gray-900 bg-white"
+          />
+        </div>
+      </div>
+
+      <!-- Textarea to paste reference data -->
+      <p class="text-center mb-6 text-gray-600">
+        Paste your reference data below.<br />If you don't, an example will be
+        loaded automatically. Simply click 'Process References' to proceed
+      </p>
+
+      <div class="mb-6">
+        <textarea
+          id="textInput"
+          class="form-textarea block w-full p-4 rounded border border-gray-300 text-gray-900 bg-white"
+          rows="15"
+        ></textarea>
+      </div>
+
+      <!-- Single process button -->
+      <div class="text-center mb-6">
+        <button
+          id="processButton"
+          class="bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 focus:outline-none"
+        >
+          Process References
+        </button>
+      </div>
+
+      <!-- Result display -->
+      <div
+        id="results"
+        class="mt-6"
+      >
+        <!-- Result will be injected dynamically -->
+      </div>
+
+      <hr class="my-2" />
+
+      <!-- Note -->
+      <div class="text-sm text-gray-700 mt-4">
+        <p>
+          <i>Disclaimer</i>: This tool currently supports IEEE and Vancouver
+          citation styles (more may be added later). It helps you quickly check
+          if a reference has a DOI and if its year is within your selected
+          range. It will generate a summary with percentages and display the
+          parsed references. Since it's still in alpha, it may not be 100%
+          accurate. If you have feedback or feature requests, feel free to share
+          them in the
+          <a
+            href="https://github.com/arnottferels/cite-check/discussions/new/choose"
+            target="_blank"
+            class="text-blue-500 hover:text-blue-700 underline"
+            >GitHub discussions</a
+          >
+          or submit a
+          <a
+            href="https://github.com/arnottferels/cite-check/pulls"
+            target="_blank"
+            class="text-blue-500 hover:text-blue-700 underline"
+            >PR</a
+          >!
+        </p>
+        <p class="mt-2">
+          I created this tool because some journals require recent publications
+          based on DOI. Counting manually in tools like Zotero, Mendeley, or
+          Word can be slow and tedious (or is there an automatic way? I’m
+          honestly not sure if there's a feature to do that automatically). This
+          tool aims to make that process faster and easier. Keep in mind it’s
+          still in early development, so it might not be perfect yet.
+        </p>
+      </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-4 mt-auto">
+      <div class="flex justify-between items-center px-4 text-sm">
+        <p>&copy; 2025 Arnott Ferels</p>
+        <a
+          href="https://arnottferels.github.io"
+          target="_blank"
+          class="hover:underline text-gray-400"
+          >Website</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
