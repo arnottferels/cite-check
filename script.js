@@ -1,8 +1,8 @@
 async function fetchDataFromFile(citationStyle) {
   try {
-    let filePath = "/example/ieee.txt";
+    let filePath = "/cite-check/example/ieee.txt";
     if (citationStyle === "vancouver") {
-      filePath = "/example/vancouver.txt";
+      filePath = "/cite-check/example/vancouver.txt";
     }
 
     const response = await fetch(filePath);
